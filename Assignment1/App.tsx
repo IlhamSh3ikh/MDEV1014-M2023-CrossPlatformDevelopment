@@ -79,7 +79,7 @@ const App = () => {
           headerTitleStyle: {
               fontSize: 24,
             },
-        }} initialRouteName="OneStopShop">
+        }} initialRouteName="Login">
           <Stack.Screen name="Login" component={Login} />
           <Stack.Screen name="Home" component={Flex} />
           <Stack.Screen name="Cart" component={CartScreen} />

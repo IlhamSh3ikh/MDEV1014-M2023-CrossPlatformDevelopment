@@ -7,11 +7,27 @@ const Login = () => {
   const [password, setPassword] = useState('');
   const navigation = useNavigation();
 
+  // Mock credentials for demonstration purposes
+  const mockCredentials = [
+    { email: 'abc@gmail.com', password: 'Abc123' },
+    { email: 'jane.smith@example.com', password: 'jane456' },
+    { email: 'test@example.com', password: 'test789' },
+  ];
+
   const handleLogin = () => {
-    // TODO: Perform login logic here
-    // For demonstration purposes, let's assume the login is successful
-    // and the user should be directed to the home page.
-    navigation.navigate('Home'); // Replace 'Home' with the actual name of your home page route.
+    // Check the entered email and password against the mock credentials
+    const matchedUser = mockCredentials.find(
+      (cred) => cred.email === email && cred.password === password
+    );
+
+    if (matchedUser) {
+      // For demonstration purposes, assume the login is successful
+      // and the user should be directed to the home page.
+      navigation.navigate('Home'); // Replace 'Home' with the actual name of your home page route.
+    } else {
+      // Handle invalid login (show an error message or perform other actions)
+      alert('Invalid email or password. Please try again.');
+    }
   };
 
   const handleSignup = () => {
@@ -45,7 +61,7 @@ const Login = () => {
         <TouchableOpacity style={styles.signupBtn} onPress={handleSignup}>
           <Text style={styles.signupText}>Sign Up</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.homeLink} onPress={() => navigation.navigate('Home')}>
+        <TouchableOpacity style={styles.homeLink} onPress={() => navigation.navigate('OneStopShop')}>
           <Text style={styles.homeLinkText}>Login as Guest</Text>
         </TouchableOpacity>
       </View>
