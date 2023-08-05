@@ -8,6 +8,7 @@ import OrderHistoryScreen from './OrderHistory';
 import CartScreen from './Cart';
 import ProfileScreen from './Profile';
 import Flex from './Home';
+
 const Tab = createBottomTabNavigator();
 type TabItem = {
   route: string;
@@ -23,41 +24,44 @@ const TabArr: TabItem[] = [
     route: 'Home',
     label: 'Home',
     type: 'Ionicons',
-    activeIcon: 'grid',
-    inActiveIcon: 'grid-outline',
+    activeIcon: 'home',
+    inActiveIcon: 'home-outline',
     component: Flex,
   },
   {
     route: 'History',
     label: 'History',
     type: 'Ionicons',
-    activeIcon: 'grid',
-    inActiveIcon: 'grid-outline',
+    activeIcon: 'book',
+    inActiveIcon: 'book-outline',
     component: OrderHistoryScreen,
   },
   {
     route: 'Cart',
     label: 'Cart',
     type: 'MaterialCommunityIcons',
-    activeIcon: 'heart-plus',
-    inActiveIcon: 'heart-plus-outline',
+    activeIcon: 'cart',
+    inActiveIcon: 'cart-outline',
     component: CartScreen,
   },
   {
     route: 'Profile',
     label: 'Profile',
-    type: 'MaterialCommunityIcons',
-    activeIcon: 'timeline-plus',
-    inActiveIcon: 'timeline-plus-outline',
+    type: 'FontAwesome5',
+    activeIcon: 'user-alt',
+    inActiveIcon: 'user',
     component: ProfileScreen,
   },
 ];
 const Navigation = () => {
   return (
 <Tab.Navigator
-        screenOptions={{
-          headerShown: false,
-        }}>
+      screenOptions={{
+        headerShown: false,
+        tabBarActiveTintColor: '#66BB6A', // Set the active tab icon color
+        tabBarInactiveTintColor: 'gray', // Set the inactive tab icon color
+        tabBarStyle: { backgroundColor: 'black' }, //Navigation bar background colour
+      }}>
           {TabArr.map((item, index) => {
             return (
               <Tab.Screen key={index} name={item.route} component={item.component}
