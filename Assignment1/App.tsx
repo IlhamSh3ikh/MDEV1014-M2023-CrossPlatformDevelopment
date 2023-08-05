@@ -73,8 +73,12 @@ const App = () => {
     <><NavigationContainer>
         <Stack.Navigator screenOptions={{
           headerStyle: {
-            backgroundColor: '#66BB6A', // Set your desired background color here
+            backgroundColor: 'black', // Set your desired background color here
           },
+          headerTintColor: 'green',
+          headerTitleStyle: {
+              fontSize: 24,
+            },
         }} initialRouteName="OneStopShop">
           <Stack.Screen name="Login" component={Login} />
           <Stack.Screen name="Home" component={Flex} />
