@@ -23,7 +23,7 @@ const Login = () => {
     if (matchedUser) {
       // For demonstration purposes, assume the login is successful
       // and the user should be directed to the home page.
-      navigation.navigate('Home'); // Replace 'Home' with the actual name of your home page route.
+      navigation.navigate('OneStopShop'); // Replace 'Home' with the actual name of your home page route.
     } else {
       // Handle invalid login (show an error message or perform other actions)
       alert('Invalid email or password. Please try again.');
