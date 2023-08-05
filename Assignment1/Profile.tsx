@@ -1,7 +1,8 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
+import Navigation from './Navigation';
 
-const ProfileScreen = () => {
+const ProfileScreen = ({routes, navigation}) => {
   return (
     <View style={styles.container}>
       <View style={styles.profileHeader}>
@@ -30,6 +31,9 @@ const ProfileScreen = () => {
         </View>
         <TouchableOpacity style={styles.saveButton}>
           <Text style={styles.saveButtonText}>Save Information</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.saveButton} onPress={() => navigation.reset({ index : 0, routes : [{name : 'Login'}]})}>
+          <Text style={styles.saveButtonText}>Logout</Text>
         </TouchableOpacity>
       </View>
     </View>
@@ -82,11 +86,13 @@ const styles = StyleSheet.create({
     marginBottom: 5,
   },
   saveButton: {
-    backgroundColor: '#66BB6A',
+    backgroundColor: '#616161',
+    borderColor: '#616161',
     paddingVertical: 12,
     borderRadius: 8,
     alignItems: 'center',
     marginTop: 20,
+    borderWidth : 2
   },
   saveButtonText: {
     color: '#fff',

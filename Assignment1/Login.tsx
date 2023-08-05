@@ -9,9 +9,9 @@ const Login = () => {
 
   // Mock credentials for demonstration purposes
   const mockCredentials = [
-    { email: 'abc@gmail.com', password: 'Abc123' },
+    { email: 'Abc@gmail.com', password: 'Abc123' },
     { email: 'jane.smith@example.com', password: 'jane456' },
-    { email: 'test@example.com', password: 'test789' },
+    { email: 'Test@example.com', password: 'test789' },
   ];
 
   const handleLogin = () => {
@@ -23,14 +23,14 @@ const Login = () => {
     if (matchedUser) {
       // For demonstration purposes, assume the login is successful
       // and the user should be directed to the home page.
-      navigation.navigate('OneStopShop'); // Replace 'Home' with the actual name of your home page route.
+      navigation.reset({ index : 0, routes : [{name : 'OneStopShop'}]}); // Replace 'Home' with the actual name of your home page route.
     } else {
       // Handle invalid login (show an error message or perform other actions)
       alert('Invalid email or password. Please try again.');
     }
   };
 
-  const handleSignup = () => {
+  const handleSignup = ({route, navigation}) => {
     navigation.navigate('Signup'); // Navigate to the Signup screen
   };
 
@@ -61,7 +61,7 @@ const Login = () => {
         <TouchableOpacity style={styles.signupBtn} onPress={handleSignup}>
           <Text style={styles.signupText}>Sign Up</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.homeLink} onPress={() => navigation.navigate('OneStopShop')}>
+        <TouchableOpacity style={styles.homeLink} onPress={() => navigation.reset({ index : 0, routes : [{name : 'OneStopShop'}]})}>
           <Text style={styles.homeLinkText}>Login as Guest</Text>
         </TouchableOpacity>
       </View>

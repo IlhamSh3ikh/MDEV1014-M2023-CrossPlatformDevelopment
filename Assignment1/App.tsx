@@ -13,72 +13,30 @@ import ProfileScreen from './Profile';
 import OrderHistoryScreen from './OrderHistory';
 import Signup from './Signup';
 
-
 const Stack = createNativeStackNavigator();
-import { StyleSheet, Text, View, TextInput} from 'react-native';
+import { StyleSheet, Text, View, TextInput } from 'react-native';
 import GymWearResult from './GymWearResult';
 import ShoesResult from './ShoesResult';
 import TrousersResult from './TrousersResult';
 import ShirtsResult from './ShirtsResult';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-
 const Tab = createBottomTabNavigator();
 
-type TabItem = {
-  route: string;
-  label: string;
-  type: keyof typeof Icons;
-  activeIcon: string;
-  inActiveIcon: string;
-  component: React.ComponentType<any>; 
-};
+// TabItem and TabArr definitions here...
 
-const TabArr: TabItem[] = [
-  {
-    route: 'Home',
-    label: 'Home',
-    type: 'Ionicons',
-    activeIcon: 'grid',
-    inActiveIcon: 'grid-outline',
-    component: Flex,
-  },
-  {
-    route: 'History',
-    label: 'History',
-    type: 'Ionicons',
-    activeIcon: 'grid',
-    inActiveIcon: 'grid-outline',
-    component: OrderHistoryScreen,
-  },
-  {
-    route: 'Cart',
-    label: 'Cart',
-    type: 'MaterialCommunityIcons',
-    activeIcon: 'heart-plus',
-    inActiveIcon: 'heart-plus-outline',
-    component: CartScreen,
-  },
-  {
-    route: 'Profile',
-    label: 'Profile',
-    type: 'MaterialCommunityIcons',
-    activeIcon: 'timeline-plus',
-    inActiveIcon: 'timeline-plus-outline',
-    component: ProfileScreen,
-  },
-];
 const App = () => {
   return (
-    <><NavigationContainer>
+    <View style={styles.container}>
+      <NavigationContainer>
         <Stack.Navigator screenOptions={{
           headerStyle: {
-            backgroundColor: 'black', // Set your desired background color here
+            backgroundColor: 'black',
           },
           headerTintColor: 'green',
           headerTitleStyle: {
-              fontSize: 24,
-            },
+            fontSize: 24,
+          },
         }} initialRouteName="Login">
           <Stack.Screen name="Login" component={Login} />
           <Stack.Screen name="Home" component={Flex} />
@@ -88,31 +46,14 @@ const App = () => {
           <Stack.Screen name="Profile" component={ProfileScreen} />
           <Stack.Screen name="OrderHistory" component={OrderHistoryScreen} />
           <Stack.Screen name="OneStopShop" component={Navigation} />
-          <Stack.Screen name="GymWearResult" component={GymWearResult}/>
-          <Stack.Screen name="ShirtsResult" component={ShirtsResult}/>
-          <Stack.Screen name="ShoesResult" component={ShoesResult}/>
-          <Stack.Screen name="TrousersResult" component={TrousersResult}/>
+          <Stack.Screen name="GymWearResult" component={GymWearResult} />
+          <Stack.Screen name="ShirtsResult" component={ShirtsResult} />
+          <Stack.Screen name="ShoesResult" component={ShoesResult} />
+          <Stack.Screen name="TrousersResult" component={TrousersResult} />
           {/* Other screen components */}
         </Stack.Navigator>
-    </NavigationContainer><View style={styles.container}>
-    <NavigationContainer>
-    <Tab.Navigator
-        screenOptions={{
-          headerShown: false,
-        }}>
-          {TabArr.map((item, index) => {
-            return (
-              <Tab.Screen key={index} name={item.route} component={item.component}
-                options={{
-                  tabBarLabel: item.label,
-                  tabBarIcon:({color, focused}) => (<Icon type ={item.type} name={focused ? item.activeIcon : item.inActiveIcon} color={color}/>)
-                }}
-              />
-            )
-          })}
-</Tab.Navigator>
       </NavigationContainer>
-    </View></> 
+    </View>
   );
 };
 
@@ -121,5 +62,6 @@ export default App;
 const styles = StyleSheet.create({
   container: {
     backgroundColor: '#66BB6A',
+    flex: 1,
   },
 });
