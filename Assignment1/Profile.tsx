@@ -1,72 +1,35 @@
-import React, { useState } from 'react';
-import { View, Text, StyleSheet, Image, TextInput, TouchableOpacity, Alert } from 'react-native';
+import React from 'react';
+import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
 
 const ProfileScreen = () => {
-  const [name, setName] = useState('User Name');
-  const [email, setEmail] = useState('username@example.com');
-  const [phone, setPhone] = useState('+1 123-456-7890');
-  const [address, setAddress] = useState('123 Main Street');
-  const [city, setCity] = useState('Anytown');
-  const [country, setCountry] = useState('United States');
-
-  const saveInformation = () => {
-    // Perform the logic to save the information
-    Alert.alert('Information Saved', 'The information has been saved successfully.');
-  };
-
   return (
     <View style={styles.container}>
       <View style={styles.profileHeader}>
         <Image
           style={styles.avatar}
-          source={require('./assets/profile.jpeg')} // Replace with your own avatar image URL
+          source={{ uri: 'https://example.com/avatar.jpg' }} // Replace with your own avatar image URL
         />
-        <TextInput
-          style={[styles.username, styles.whiteBackground]} // Added styles.whiteBackground
-          value={name}
-          onChangeText={setName}
-          placeholder="User Name"
-        />
+        {/* Replace with the username */}
+        <Text style={styles.username}>User Name</Text> 
       </View>
       <View style={styles.profileContent}>
-        <Text style={styles.sectionTitle}>Personal Information</Text>
-        <View style={styles.infoSection}>
-          <TextInput
-            style={[styles.infoText, styles.whiteBackground]} // Added styles.whiteBackground
-            value={email}
-            onChangeText={setEmail}
-            placeholder="Email"
-          />
-          <TextInput
-            style={[styles.infoText, styles.whiteBackground]} // Added styles.whiteBackground
-            value={phone}
-            onChangeText={setPhone}
-            placeholder="Phone"
-          />
+        <View style={styles.bar}>
+          <Text style={styles.barText}>Personal Information</Text>
         </View>
-        <Text style={styles.sectionTitle}>Address</Text>
-        <View style={styles.infoSection}>
-          <TextInput
-            style={[styles.infoText, styles.whiteBackground]} // Added styles.whiteBackground
-            value={address}
-            onChangeText={setAddress}
-            placeholder="Address"
-          />
-          <TextInput
-            style={[styles.infoText, styles.whiteBackground]} // Added styles.whiteBackground
-            value={city}
-            onChangeText={setCity}
-            placeholder="City"
-          />
-          <TextInput
-            style={[styles.infoText, styles.whiteBackground]} // Added styles.whiteBackground
-            value={country}
-            onChangeText={setCountry}
-            placeholder="Country"
-          />
+        <View style={styles.section}>
+          <Text style={styles.infoText}>Email: user.name@example.com</Text>
+          <Text style={styles.infoText}>Phone: +1 123-456-7890</Text>
         </View>
-        <TouchableOpacity style={[styles.button, styles.whiteBackground]} onPress={saveInformation}>
-          <Text style={[styles.buttonText, styles.blackText]}>Save Information</Text>
+        <View style={styles.bar}>
+          <Text style={styles.barText}>Address</Text>
+        </View>
+        <View style={styles.section}>
+          <Text style={styles.infoText}>123 Main Street</Text> 
+          <Text style={styles.infoText}>City: Anytown</Text>
+          <Text style={styles.infoText}>Country: United States</Text>
+        </View>
+        <TouchableOpacity style={styles.saveButton}>
+          <Text style={styles.saveButtonText}>Save Information</Text>
         </TouchableOpacity>
       </View>
     </View>
@@ -76,8 +39,7 @@ const ProfileScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#66BB6A', // Set the background color to green
-    justifyContent: 'center', // Center the content vertically
+    backgroundColor: '#66BB6A', // Updated background color
   },
   profileHeader: {
     alignItems: 'center',
@@ -93,48 +55,44 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: 'bold',
     marginTop: 10,
-    marginBottom: 10,
-    textAlign: 'center',
   },
   profileContent: {
     paddingHorizontal: 20,
-    alignItems: 'center', // Center the content horizontally
   },
-  sectionTitle: {
-    fontSize: 20,
-    fontWeight: 'bold',
-    marginTop: 20,
+  bar: {
+    backgroundColor: '#333',
+    paddingVertical: 5,
+    paddingHorizontal: 10,
     marginBottom: 10,
   },
-  infoSection: {
-    alignItems: 'center', // Center the content horizontally
-    width: '100%', // Occupy the full width of the parent view
+  barText: {
+    color: '#fff',
+    fontWeight: 'bold',
+    fontSize: 18,
+  },
+  section: {
+    backgroundColor: '#fff', // Set white background for sections
+    paddingVertical: 10,
+    paddingHorizontal: 10,
+    marginBottom: 10,
+    borderRadius: 8,
   },
   infoText: {
     fontSize: 16,
     marginBottom: 5,
-    textAlign: 'center', // Center the text within each input field
-    width: '100%', // Occupy the full width of the parent view
   },
-  whiteBackground: {
-    backgroundColor: '#fff', // Set the background color to white
-  },
-  button: {
-    width: '80%',
+  saveButton: {
     backgroundColor: '#66BB6A',
-    padding: 10,
-    borderRadius: 5,
-    marginTop: 20,
+    paddingVertical: 12,
+    borderRadius: 8,
     alignItems: 'center',
+    marginTop: 20,
   },
-  buttonText: {
-    fontSize: 16,
+  saveButtonText: {
+    color: '#fff',
     fontWeight: 'bold',
-  },
-  blackText: {
-    color: '#000', // Set the text color to black
+    fontSize: 16,
   },
 });
 
 export default ProfileScreen;
-
