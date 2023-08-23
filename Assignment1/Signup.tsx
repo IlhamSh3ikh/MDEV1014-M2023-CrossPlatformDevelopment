@@ -10,7 +10,7 @@ const Signup = () => {
   const [confirmPassword, setConfirmPassword] = useState('');
 
   const handleSignup = () => {
-    // TODO: Perform signup logic here
+    
   };
 
   return (

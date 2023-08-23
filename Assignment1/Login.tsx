@@ -7,7 +7,7 @@ const Login = () => {
   const [password, setPassword] = useState('');
   const navigation = useNavigation();
 
-  // Mock credentials for demonstration purposes
+  
   const mockCredentials = [
     { email: 'Abc@gmail.com', password: 'Abc123' },
     { email: 'jane.smith@example.com', password: 'jane456' },
@@ -15,23 +15,22 @@ const Login = () => {
   ];
 
   const handleLogin = () => {
-    // Check the entered email and password against the mock credentials
+   
     const matchedUser = mockCredentials.find(
       (cred) => cred.email === email && cred.password === password
     );
 
     if (matchedUser) {
-      // For demonstration purposes, assume the login is successful
-      // and the user should be directed to the home page.
-      navigation.reset({ index : 0, routes : [{name : 'OneStopShop'}]}); // Replace 'Home' with the actual name of your home page route.
+      
+      navigation.reset({ index : 0, routes : [{name : 'OneStopShop'}]}); 
     } else {
-      // Handle invalid login (show an error message or perform other actions)
+      
       alert('Invalid email or password. Please try again.');
     }
   };
 
-  const handleSignup = ({route, navigation}) => {
-    navigation.navigate('Signup'); // Navigate to the Signup screen
+  const handleSignup = () => {
+    navigation.navigate('Signup');
   };
 
   return (
