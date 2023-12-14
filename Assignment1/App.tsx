@@ -20,14 +20,15 @@ import ShoesResult from './ShoesResult';
 import TrousersResult from './TrousersResult';
 import ShirtsResult from './ShirtsResult';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-
+import { AuthProvider } from './AuthContext';
 const Tab = createBottomTabNavigator();
 
 // TabItem and TabArr definitions here...
 
-const App = () => {
+const App: React.FC = () => {
   return (
     <View style={styles.container}>
+      <AuthProvider>
       <NavigationContainer>
         <Stack.Navigator screenOptions={{
           headerStyle: {
@@ -53,6 +54,7 @@ const App = () => {
           {/* Other screen components */}
         </Stack.Navigator>
       </NavigationContainer>
+      </AuthProvider>
     </View>
   );
 };

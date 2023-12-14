@@ -1,8 +1,18 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
 import Navigation from './Navigation';
+import { useAuth } from './AuthContext';
 
-const ProfileScreen = ({routes, navigation}) => {
+const ProfileScreen = ({ navigation}) => {
+  const { user, isLoggedIn, logout } = useAuth(); // Use the useAuth hook to access authentication state
+  // const userEmail = isLoggedIn ? 'user.name@example.com' : 'Guest';
+  const handleLogout = () => {
+    logout();
+    navigation.reset({
+      index: 0,
+      routes: [{ name: 'Login' }] 
+    });
+  };
   return (
     <View style={styles.container}>
       <View style={styles.profileHeader}>
@@ -11,14 +21,14 @@ const ProfileScreen = ({routes, navigation}) => {
           source={{ uri: 'https://example.com/avatar.jpg' }} // Replace with your own avatar image URL
         />
         {/* Replace with the username */}
-        <Text style={styles.username}>User Name</Text> 
+        <Text style={styles.username}>{user?.fullName || 'Guest'}</Text> 
       </View>
       <View style={styles.profileContent}>
         <View style={styles.bar}>
           <Text style={styles.barText}>Personal Information</Text>
         </View>
         <View style={styles.section}>
-          <Text style={styles.infoText}>Email: user.name@example.com</Text>
+          <Text style={styles.infoText}>{user?.email || 'N/A'}</Text>
           <Text style={styles.infoText}>Phone: +1 123-456-7890</Text>
         </View>
         <View style={styles.bar}>
@@ -32,9 +42,9 @@ const ProfileScreen = ({routes, navigation}) => {
         <TouchableOpacity style={styles.saveButton}>
           <Text style={styles.saveButtonText}>Save Information</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.saveButton} onPress={() => navigation.reset({ index : 0, routes : [{name : 'Login'}]})}>
-          <Text style={styles.saveButtonText}>Logout</Text>
-        </TouchableOpacity>
+        <TouchableOpacity style={styles.saveButton} onPress={handleLogout}>
+        <Text style={styles.saveButtonText}>Logout</Text>
+      </TouchableOpacity>
       </View>
     </View>
   );
