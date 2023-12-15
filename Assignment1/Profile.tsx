@@ -21,7 +21,7 @@ const ProfileScreen = ({ navigation}) => {
           source={{ uri: 'https://example.com/avatar.jpg' }} // Replace with your own avatar image URL
         />
         {/* Replace with the username */}
-        <Text style={styles.username}>{user?.fullName || 'Guest'}</Text> 
+        <Text style={styles.username}>{`${user?.firstName} ${user?.lastName}`|| 'Guest'}</Text> 
       </View>
       <View style={styles.profileContent}>
         <View style={styles.bar}>

@@ -3,32 +3,25 @@ import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-nativ
 import { useNavigation } from '@react-navigation/native';
 import { useAuth } from './AuthContext'; 
 
-const Login = () => {
+const Login: React.FC = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [fullName] = useState('');
   const navigation = useNavigation();
   const { login } = useAuth()
 
   
-  const mockCredentials = [
-    { email: 'Abc@gmail.com', password: 'Abc123', fullName: 'ABC CBA' },
-    { email: 'jane.smith@example.com', password: 'jane456', fullName: 'Jane Smith' },
-    { email: 'Test@example.com', password: 'test789', fullName: 'Test Example' },
-  ];
+  // const mockCredentials = [
+  //   { email: 'Abc@gmail.com', password: 'Abc123', fullName: 'ABC CBA' },
+  //   { email: 'jane.smith@example.com', password: 'jane456', fullName: 'Jane Smith' },
+  //   { email: 'Test@example.com', password: 'test789', fullName: 'Test Example' },
+  // ];
 
-  const handleLogin = () => {
-   
-    const matchedUser = mockCredentials.find(
-      (cred) => cred.email === email && cred.password === password
-    );
-
-    if (matchedUser) {
-      const { email, fullName } = matchedUser;
-      login(email, fullName);
-      navigation.reset({ index : 0, routes : [{name : 'OneStopShop'}]}); 
-    } else {
-      
+  const handleLogin = async (): Promise<void> => {
+    try {
+      await login(email, password);
+      navigation.reset({ index: 0, routes: [{ name: 'OneStopShop' }] });
+    } catch (error) {
+      console.error(error);
       alert('Invalid email or password. Please try again.');
     }
   };
@@ -64,8 +57,8 @@ const Login = () => {
         <TouchableOpacity style={styles.signupBtn} onPress={handleSignup}>
           <Text style={styles.signupText}>Sign Up</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.homeLink} onPress={() => navigation.reset({ index : 0, routes : [{name : 'OneStopShop'}]})}>
-          <Text style={styles.homeLinkText}>Login as Guest</Text>
+        <TouchableOpacity onPress={() => navigation.reset({ index : 0, routes : [{name : 'OneStopShop'}]})}>
+          <Text>Login as Guest</Text>
         </TouchableOpacity>
       </View>
     </View>
