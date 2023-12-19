@@ -4,8 +4,7 @@ import Navigation from './Navigation';
 import { useAuth } from './AuthContext';
 
 const ProfileScreen = ({ navigation}) => {
-  const { user, isLoggedIn, logout } = useAuth(); // Use the useAuth hook to access authentication state
-  // const userEmail = isLoggedIn ? 'user.name@example.com' : 'Guest';
+  const { user, isLoggedIn, logout } = useAuth();
   const handleLogout = () => {
     logout();
     navigation.reset({
@@ -18,10 +17,9 @@ const ProfileScreen = ({ navigation}) => {
       <View style={styles.profileHeader}>
         <Image
           style={styles.avatar}
-          source={{ uri: 'https://example.com/avatar.jpg' }} // Replace with your own avatar image URL
+          source={{ uri: 'https://example.com/avatar.jpg' }} 
         />
-        {/* Replace with the username */}
-        <Text style={styles.username}>{`${user?.firstName} ${user?.lastName}`|| 'Guest'}</Text> 
+        <Text style={styles.username}>{`${user?.firstName} ${user?.middleName} ${user?.lastName}`|| 'Guest'}</Text> 
       </View>
       <View style={styles.profileContent}>
         <View style={styles.bar}>
@@ -85,7 +83,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
   },
   section: {
-    backgroundColor: '#fff', // Set white background for sections
+    backgroundColor: '#fff',
     paddingVertical: 10,
     paddingHorizontal: 10,
     marginBottom: 10,

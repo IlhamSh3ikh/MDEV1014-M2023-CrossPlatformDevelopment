@@ -31,7 +31,6 @@ const Signup: React.FC = () => {
       const data = await response.json();
 
       if (data.success) {
-        // You can navigate to the login screen or any other screen after successful signup
         navigation.navigate('Login');
       } else {
         console.log(data.message);
