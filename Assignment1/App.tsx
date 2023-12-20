@@ -1,26 +1,26 @@
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import Icon, { Icons } from '../Assignment1/components/Icon';
-import SearchResult from './SearchResult';
-import Login from './Login';
-import Navigation from './Navigation';
+import SearchResult from './views/results/SearchResult';
+import Login from './views/login/Login';
+import Navigation from './views/Navigation';
 import { NavigationContainer } from '@react-navigation/native';
 import { MaterialIcons } from '@expo/vector-icons'
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import Flex from './Home';
-import CartScreen from './Cart';
-import ProfileScreen from './Profile';
-import OrderHistoryScreen from './OrderHistory';
-import Signup from './Signup';
+import Flex from './views/home/Home';
+import CartScreen from './views/Cart';
+import ProfileScreen from './views/Profile';
+import OrderHistoryScreen from './views/OrderHistory';
+import Signup from './views/signup/Signup';
 
 const Stack = createNativeStackNavigator();
 import { StyleSheet, Text, View, TextInput } from 'react-native';
-import GymWearResult from './GymWearResult';
-import ShoesResult from './ShoesResult';
-import TrousersResult from './TrousersResult';
-import ShirtsResult from './ShirtsResult';
+import GymWearResult from './views/results/GymWearResult';
+import ShoesResult from './views/results/ShoesResult';
+import TrousersResult from './views/results/TrousersResult';
+import ShirtsResult from './views/results/ShirtsResult';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { AuthProvider } from './AuthContext';
+import { AuthProvider } from './controllers/AuthContext';
 const Tab = createBottomTabNavigator();
 
 // TabItem and TabArr definitions here...

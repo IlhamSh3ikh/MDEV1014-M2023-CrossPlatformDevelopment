@@ -2,24 +2,23 @@ import React from "react";
 import { Button, Platform, SafeAreaView, StyleSheet, TouchableOpacity } from "react-native";
 import { Text, View, Image } from "react-native";
 
-const GymWearResult = ({navigation}) => {
+const TrousersResult = ({navigation}) => {
     return(
         <SafeAreaView style = {styles.wrapper}>
             <View style = {[styles.boxStyle, styles.topBar]}>
-                
                 <View style = {styles.textArea}>
                     {/* <Text style = {styles.screenText}>Search Results</Text> */}
                     <View style = {styles.box1content}>
-                        <Image source = {require('./assets/searchIcon.png')} style = {styles.searchIcon} />
-                        <Text style = {styles.searchText}>Gym Wear</Text>
-                        <Image source = {require('./assets/cancelIcon.png')} style = {styles.cancelIcon} />
+                        <Image source = {require('../../assets/searchIcon.png')} style = {styles.searchIcon} />
+                        <Text style = {styles.searchText}>Trousers</Text>
+                        <Image source = {require('../../assets/cancelIcon.png')} style = {styles.cancelIcon} />
                     </View>
                 </View>
                 <TouchableOpacity onPress={() => {
                     navigation.push('Cart');
                     }}>
-                        <Image source={require('./assets/cartIcon.png')} style = {styles.cartIcon} />            
-                </TouchableOpacity>  
+                        <Image source={require('../../assets/cartIcon.png')} style = {styles.cartIcon} />            
+                </TouchableOpacity>
             </View>
 
 
@@ -36,23 +35,23 @@ const GymWearResult = ({navigation}) => {
             <View style = {[styles.boxStyle, styles.box2]}>
                 <View style = {styles.productContainer}>
                     <View style = {styles.imageContainer}>
-                        <Image source={require('./assets/GymWear1.webp')} style = {styles.resultImage} />
+                        <Image source={require('../../assets/Trouser1.webp')} style = {styles.resultImage} />
                     </View>
                     <View style = {styles.descriptionContainer}>
-                        <Text style = {styles.productName}>Black Round Neck Gym T-Shirt</Text>
+                        <Text style = {styles.productName}>Army Green Cargo Pants</Text>
                         <View style = {styles.starContainer}>
                             {!(Platform.OS == "web") && (
-                                <Text style = {styles.price}>$30</Text>
+                                <Text style = {styles.price}>$39</Text>
                             )}
-                            <Image source = {require('./assets/starFilled.jpeg')} style = {styles.ratingImage} />
-                            <Image source = {require('./assets/starFilled.jpeg')} style = {styles.ratingImage} />
-                            <Image source = {require('./assets/starFilled.jpeg')} style = {styles.ratingImage} />
-                            <Image source = {require('./assets/starFilled.jpeg')} style = {styles.ratingImage} />
-                            <Image source = {require('./assets/starEmpty.jpeg')} style = {styles.ratingImage} />
+                            <Image source = {require('../../assets/starFilled.jpeg')} style = {styles.ratingImage} />
+                            <Image source = {require('../../assets/starFilled.jpeg')} style = {styles.ratingImage} />
+                            <Image source = {require('../../assets/starFilled.jpeg')} style = {styles.ratingImage} />
+                            <Image source = {require('../../assets/starFilled.jpeg')} style = {styles.ratingImage} />
+                            <Image source = {require('../../assets/starEmpty.jpeg')} style = {styles.ratingImage} />
                         </View>
 
                         {Platform.OS == "web" && (
-                            <><Text style={styles.price}>$30</Text><Text>6 in stock</Text></>
+                            <><Text style={styles.price}>$39</Text><Text>21 in stock</Text></>
                         )}
                         <View style = {styles.buttonContainer}>
                             <TouchableOpacity style = {styles.buttonStyle} onPress={() => {
@@ -72,23 +71,58 @@ const GymWearResult = ({navigation}) => {
 
                 <View style = {styles.productContainer}>
                     <View style = {styles.imageContainer}>
-                        <Image source={require('./assets/GymWear2.webp')} style = {styles.resultImage} />
+                        <Image source={require('../../assets/Trouser4.jpeg')} style = {styles.resultImage} />
                     </View>
                     <View style = {styles.descriptionContainer}>
-                        <Text style = {styles.productName}>Red Cropped Hoodie for Gym</Text>
+                        <Text style = {styles.productName}>Beige Baggy Pants for Women</Text>
+                        <View style = {styles.starContainer}>
+                            {!(Platform.OS == "web") && (
+                                <Text style = {styles.price}>$26</Text>
+                            )}
+                            <Image source = {require('../../assets/starFilled.jpeg')} style = {styles.ratingImage} />
+                            <Image source = {require('../../assets/starFilled.jpeg')} style = {styles.ratingImage} />
+                            <Image source = {require('../../assets/starFilled.jpeg')} style = {styles.ratingImage} />
+                            <Image source = {require('../../assets/starEmpty.jpeg')} style = {styles.ratingImage} />
+                            <Image source = {require('../../assets/starEmpty.jpeg')} style = {styles.ratingImage} />
+                        </View>
+
+                        {Platform.OS == "web" && (
+                            <><Text style={styles.price}>$26</Text><Text>7 in stock</Text></>
+                        )}
+                        <View style = {styles.buttonContainer}>
+                            <TouchableOpacity style = {styles.buttonStyle} onPress={() => {
+                                    navigation.push('Cart');
+                                }}>
+                                <Text>Buy</Text>
+                            </TouchableOpacity>
+                            <TouchableOpacity style = {styles.buttonStyle} onPress={() => {
+                                    navigation.push('Cart');
+                                }}>
+                                <Text>Add to cart</Text>
+                            </TouchableOpacity>
+                        </View>
+                    </View>
+                </View>
+
+                <View style = {styles.productContainer}>
+                    <View style = {styles.imageContainer}>
+                        <Image source={require('../../assets/Trouser2.jpeg')} style = {styles.resultImage} />
+                    </View>
+                    <View style = {styles.descriptionContainer}>
+                        <Text style = {styles.productName}>Grey Cargo Loose Pants</Text>
                         <View style = {styles.starContainer}>
                             {!(Platform.OS == "web") && (
                                 <Text style = {styles.price}>$69</Text>
                             )}
-                            <Image source = {require('./assets/starFilled.jpeg')} style = {styles.ratingImage} />
-                            <Image source = {require('./assets/starFilled.jpeg')} style = {styles.ratingImage} />
-                            <Image source = {require('./assets/starFilled.jpeg')} style = {styles.ratingImage} />
-                            <Image source = {require('./assets/starEmpty.jpeg')} style = {styles.ratingImage} />
-                            <Image source = {require('./assets/starEmpty.jpeg')} style = {styles.ratingImage} />
+                            <Image source = {require('../../assets/starFilled.jpeg')} style = {styles.ratingImage} />
+                            <Image source = {require('../../assets/starFilled.jpeg')} style = {styles.ratingImage} />
+                            <Image source = {require('../../assets/starEmpty.jpeg')} style = {styles.ratingImage} />
+                            <Image source = {require('../../assets/starEmpty.jpeg')} style = {styles.ratingImage} />
+                            <Image source = {require('../../assets/starEmpty.jpeg')} style = {styles.ratingImage} />
                         </View>
 
                         {Platform.OS == "web" && (
-                            <><Text style={styles.price}>$69</Text><Text>8 in stock</Text></>
+                            <><Text style={styles.price}>$69</Text><Text>3 in stock</Text></>
                         )}
                         <View style = {styles.buttonContainer}>
                             <TouchableOpacity style = {styles.buttonStyle} onPress={() => {
@@ -107,23 +141,23 @@ const GymWearResult = ({navigation}) => {
 
                 <View style = {styles.productContainer}>
                     <View style = {styles.imageContainer}>
-                        <Image source={require('./assets/GymWear3.jpeg')} style = {styles.resultImage} />
+                        <Image source={require('../../assets/Trouser3.jpeg')} style = {styles.resultImage} />
                     </View>
                     <View style = {styles.descriptionContainer}>
-                        <Text style = {styles.productName}>Colourful Tank Tops - Set of 6</Text>
+                        <Text style = {styles.productName}>Brown Formal Pants</Text>
                         <View style = {styles.starContainer}>
                             {!(Platform.OS == "web") && (
-                                <Text style = {styles.price}>$40</Text>
+                                <Text style = {styles.price}>$39</Text>
                             )}
-                            <Image source = {require('./assets/starFilled.jpeg')} style = {styles.ratingImage} />
-                            <Image source = {require('./assets/starFilled.jpeg')} style = {styles.ratingImage} />
-                            <Image source = {require('./assets/starEmpty.jpeg')} style = {styles.ratingImage} />
-                            <Image source = {require('./assets/starEmpty.jpeg')} style = {styles.ratingImage} />
-                            <Image source = {require('./assets/starEmpty.jpeg')} style = {styles.ratingImage} />
+                            <Image source = {require('../../assets/starFilled.jpeg')} style = {styles.ratingImage} />
+                            <Image source = {require('../../assets/starFilled.jpeg')} style = {styles.ratingImage} />
+                            <Image source = {require('../../assets/starFilled.jpeg')} style = {styles.ratingImage} />
+                            <Image source = {require('../../assets/starFilled.jpeg')} style = {styles.ratingImage} />
+                            <Image source = {require('../../assets/starEmpty.jpeg')} style = {styles.ratingImage} />
                         </View>
 
                         {Platform.OS == "web" && (
-                            <><Text style={styles.price}>$40</Text><Text>4 in stock</Text></>
+                            <><Text style={styles.price}>$39</Text><Text>14 in stock</Text></>
                         )}
                         <View style = {styles.buttonContainer}>
                             <TouchableOpacity style = {styles.buttonStyle} onPress={() => {
@@ -142,23 +176,23 @@ const GymWearResult = ({navigation}) => {
 
                 <View style = {styles.productContainer}>
                     <View style = {styles.imageContainer}>
-                        <Image source={require('./assets/GymWear4.jpg')} style = {styles.resultImage} />
+                        <Image source={require('../../assets/Trouser5.jpeg')} style = {styles.resultImage} />
                     </View>
                     <View style = {styles.descriptionContainer}>
-                        <Text style = {styles.productName}>Black Gym Sweatpants</Text>
+                        <Text style = {styles.productName}>White Formal Pants for Women</Text>
                         <View style = {styles.starContainer}>
                             {!(Platform.OS == "web") && (
-                                <Text style = {styles.price}>$20</Text>
+                                <Text style = {styles.price}>$29</Text>
                             )}
-                            <Image source = {require('./assets/starFilled.jpeg')} style = {styles.ratingImage} />
-                            <Image source = {require('./assets/starFilled.jpeg')} style = {styles.ratingImage} />
-                            <Image source = {require('./assets/starFilled.jpeg')} style = {styles.ratingImage} />
-                            <Image source = {require('./assets/starFilled.jpeg')} style = {styles.ratingImage} />
-                            <Image source = {require('./assets/starEmpty.jpeg')} style = {styles.ratingImage} />
+                            <Image source = {require('../../assets/starFilled.jpeg')} style = {styles.ratingImage} />
+                            <Image source = {require('../../assets/starFilled.jpeg')} style = {styles.ratingImage} />
+                            <Image source = {require('../../assets/starFilled.jpeg')} style = {styles.ratingImage} />
+                            <Image source = {require('../../assets/starEmpty.jpeg')} style = {styles.ratingImage} />
+                            <Image source = {require('../../assets/starEmpty.jpeg')} style = {styles.ratingImage} />
                         </View>
 
                         {Platform.OS == "web" && (
-                            <><Text style={styles.price}>$20</Text><Text>12 in stock</Text></>
+                            <><Text style={styles.price}>$29</Text><Text>4 in stock</Text></>
                         )}
                         <View style = {styles.buttonContainer}>
                             <TouchableOpacity style = {styles.buttonStyle} onPress={() => {
@@ -177,58 +211,23 @@ const GymWearResult = ({navigation}) => {
 
                 <View style = {styles.productContainer}>
                     <View style = {styles.imageContainer}>
-                        <Image source={require('./assets/GymWear5.jpeg')} style = {styles.resultImage} />
+                        <Image source={require('../../assets/Trouser6.jpg')} style = {styles.resultImage} />
                     </View>
                     <View style = {styles.descriptionContainer}>
-                        <Text style = {styles.productName}>Light Blue Co-ords</Text>
+                        <Text style = {styles.productName}>Maroon Flare Pants</Text>
                         <View style = {styles.starContainer}>
                             {!(Platform.OS == "web") && (
-                                <Text style = {styles.price}>$79</Text>
+                                <Text style = {styles.price}>$59</Text>
                             )}
-                            <Image source = {require('./assets/starFilled.jpeg')} style = {styles.ratingImage} />
-                            <Image source = {require('./assets/starFilled.jpeg')} style = {styles.ratingImage} />
-                            <Image source = {require('./assets/starFilled.jpeg')} style = {styles.ratingImage} />
-                            <Image source = {require('./assets/starEmpty.jpeg')} style = {styles.ratingImage} />
-                            <Image source = {require('./assets/starEmpty.jpeg')} style = {styles.ratingImage} />
+                            <Image source = {require('../../assets/starFilled.jpeg')} style = {styles.ratingImage} />
+                            <Image source = {require('../../assets/starFilled.jpeg')} style = {styles.ratingImage} />
+                            <Image source = {require('../../assets/starFilled.jpeg')} style = {styles.ratingImage} />
+                            <Image source = {require('../../assets/starEmpty.jpeg')} style = {styles.ratingImage} />
+                            <Image source = {require('../../assets/starEmpty.jpeg')} style = {styles.ratingImage} />
                         </View>
 
                         {Platform.OS == "web" && (
-                            <><Text style={styles.price}>$79</Text><Text>9 in stock</Text></>
-                        )}
-                        <View style = {styles.buttonContainer}>
-                            <TouchableOpacity style = {styles.buttonStyle} onPress={() => {
-                                    navigation.push('Cart');
-                                }}>
-                                <Text>Buy</Text>
-                            </TouchableOpacity>
-                            <TouchableOpacity style = {styles.buttonStyle} onPress={() => {
-                                    navigation.push('Cart');
-                                }}>
-                                <Text>Add to cart</Text>
-                            </TouchableOpacity>
-                        </View>
-                    </View>
-                </View>
-
-                <View style = {styles.productContainer}>
-                    <View style = {styles.imageContainer}>
-                        <Image source={require('./assets/GymWear6.webp')} style = {styles.resultImage} />
-                    </View>
-                    <View style = {styles.descriptionContainer}>
-                        <Text style = {styles.productName}>Black and Grey Full Sleeve T-shirt</Text>
-                        <View style = {styles.starContainer}>
-                            {!(Platform.OS == "web") && (
-                                <Text style = {styles.price}>$24</Text>
-                            )}
-                            <Image source = {require('./assets/starFilled.jpeg')} style = {styles.ratingImage} />
-                            <Image source = {require('./assets/starFilled.jpeg')} style = {styles.ratingImage} />
-                            <Image source = {require('./assets/starFilled.jpeg')} style = {styles.ratingImage} />
-                            <Image source = {require('./assets/starEmpty.jpeg')} style = {styles.ratingImage} />
-                            <Image source = {require('./assets/starEmpty.jpeg')} style = {styles.ratingImage} />
-                        </View>
-
-                        {Platform.OS == "web" && (
-                            <><Text style={styles.price}>$24</Text><Text>2 in stock</Text></>
+                            <><Text style={styles.price}>$59</Text><Text>2 in stock</Text></>
                         )}
                         <View style = {styles.buttonContainer}>
                             <TouchableOpacity style = {styles.buttonStyle} onPress={() => {
@@ -394,4 +393,4 @@ const styles = StyleSheet.create({
     }
 })
 
-export default GymWearResult
+export default TrousersResult

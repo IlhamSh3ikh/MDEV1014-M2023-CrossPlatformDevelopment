@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
 import Navigation from './Navigation';
-import { useAuth } from './AuthContext';
+import { useAuth } from '../controllers/AuthContext';
 
 const ProfileScreen = ({ navigation}) => {
   const { user, isLoggedIn, logout } = useAuth();

@@ -19,7 +19,7 @@ const Flex = () => {
 const HomeScreen = () => {
   return (
     <View style={styles.titleContainer}>
-      <Image source={require('./assets/HomeShopping.jpeg')} style={styles.titleBG} />
+      <Image source={require('../../assets/HomeShopping.jpeg')} style={styles.titleBG} />
       <Text style={styles.title}>Shop it!</Text>
     </View>
   );
@@ -57,19 +57,19 @@ const ContentList = () => {
   return (
     <View style={styles.imagecontainer}>
       <TouchableOpacity style={styles.itemContainer} onPress={() => handleImageClick('GymWearResult')}>
-        <Image source={require('./assets/GymWear.png')} style={styles.itemImage} />
+        <Image source={require('../../assets/GymWear.png')} style={styles.itemImage} />
         <Text style={styles.itemText}>Gym Wear</Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.itemContainer} onPress={() => ShoesWearClick('ShoesResult')}>
-        <Image source={require('./assets/Shoes.png')} style={styles.itemImage} />
+        <Image source={require('../../assets/Shoes.png')} style={styles.itemImage} />
         <Text style={styles.itemText}>Shoes</Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.itemContainer} onPress={() => TrousersWearClick('TrousersResult')}>
-        <Image source={require('./assets/Trousers.png')} style={styles.itemImage} />
+        <Image source={require('../../assets/Trousers.png')} style={styles.itemImage} />
         <Text style={styles.itemText}>Trousers</Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.itemContainer} onPress={() => ShirtsWearClick('ShirtsResult')}>
-        <Image source={require('./assets/Shirts.png')} style={styles.itemImage} />
+        <Image source={require('../../assets/Shirts.png')} style={styles.itemImage} />
         <Text style={styles.itemText}>Shirts</Text>
       </TouchableOpacity>
     </View>
@@ -83,32 +83,32 @@ const DescriptionItems =() =>{
           <Text style={styles.categoryText}>Women Dresses</Text>
           <View style = {styles.categoryImageContainer}>
             <View style={styles.descriptionItem}>
-            <Image source={require('./assets/Fashion1.png')} style={styles.ImageWrapper} />
+            <Image source={require('../../assets/Fashion1.png')} style={styles.ImageWrapper} />
             <Text style={styles.DescriptionStyle}>Short Balck Dress</Text>
             <Text>30 CAD</Text>
           </View>
           <View style={styles.descriptionItem}>
-            <Image source={require('./assets/Fashion2.png')} style={styles.ImageWrapper}/>
+            <Image source={require('../../assets/Fashion2.png')} style={styles.ImageWrapper}/>
             <Text style={styles.DescriptionStyle}>NIKA Full Length Frock</Text>
             <Text>99 CAD</Text>
           </View>
           <View style={styles.descriptionItem}>
-            <Image source={require('./assets/Fashion4.png')} style={styles.ImageWrapper}/>
+            <Image source={require('../../assets/Fashion4.png')} style={styles.ImageWrapper}/>
             <Text style={styles.DescriptionStyle}>Women Short Green Dress</Text>
             <Text>Starts from 69 CAD</Text>
           </View>
           <View style={styles.descriptionItem}>
-            <Image source={require('./assets/Fashion5.png')} style={styles.ImageWrapper}/>
+            <Image source={require('../../assets/Fashion5.png')} style={styles.ImageWrapper}/>
             <Text style={styles.DescriptionStyle}>Long Net Maxi</Text>
             <Text>Starts from 40 CAD</Text>
           </View>
           <View style={styles.descriptionItem}>
-            <Image source={require('./assets/Fashion6.png')} style={styles.ImageWrapper}/>
+            <Image source={require('../../assets/Fashion6.png')} style={styles.ImageWrapper}/>
             <Text style={styles.DescriptionStyle}>Red Short Dress</Text>
             <Text>Starts from 80 CAD</Text>
           </View>
           <View style={styles.descriptionItem}>
-            <Image source={require('./assets/Fashion7.jpeg')} style={styles.ImageWrapper}/>
+            <Image source={require('../../assets/Fashion7.jpeg')} style={styles.ImageWrapper}/>
             <Text style={styles.DescriptionStyle}>Lace Dress</Text>
             <Text>Starts from 120 CAD</Text>
           </View> 

@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { View, Text, SafeAreaView, StyleSheet, TouchableOpacity, TextInput, Image, Platform, ScrollView } from 'react-native';
-import Icon, { Icons } from '../Assignment1/components/Icon';
-import ColorScreen from './screens/ColorScreen';
+import Icon, { Icons } from '../components/Icon';
+import ColorScreen from '../screens/ColorScreen';
 import { useNavigation } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import OrderHistoryScreen from './OrderHistory';
 import CartScreen from './Cart';
 import ProfileScreen from './Profile';
-import Flex from './Home';
+import Flex from './home/Home';
 
 const Tab = createBottomTabNavigator();
 type TabItem = {

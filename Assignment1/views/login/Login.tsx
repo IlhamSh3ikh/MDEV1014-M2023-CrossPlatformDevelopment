@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { StyleSheet, Text, View, TextInput, TouchableOpacity, Alert } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import { useAuth } from './AuthContext'; 
+import { useAuth } from '../../controllers/AuthContext'; 
 
 const Login: React.FC = () => {
   const [email, setEmail] = useState('');

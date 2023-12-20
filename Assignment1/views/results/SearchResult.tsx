@@ -9,15 +9,15 @@ const SearchResult = ({navigation}) => {
                 <View style = {styles.textArea}>
                     {/* <Text style = {styles.screenText}>Search Results</Text> */}
                     <View style = {styles.box1content}>
-                        <Image source = {require('./assets/searchIcon.png')} style = {styles.searchIcon} />
+                        <Image source = {require('../../assets/searchIcon.png')} style = {styles.searchIcon} />
                         <Text style = {styles.searchText}>Table</Text>
-                        <Image source = {require('./assets/cancelIcon.png')} style = {styles.cancelIcon} />
+                        <Image source = {require('../../assets/cancelIcon.png')} style = {styles.cancelIcon} />
                     </View>
                 </View>
                 <TouchableOpacity onPress={() => {
                     navigation.push('Cart');
                     }}>
-                        <Image source={require('./assets/cartIcon.png')} style = {styles.cartIcon} />            
+                        <Image source={require('../../assets/cartIcon.png')} style = {styles.cartIcon} />            
                 </TouchableOpacity>
             </View>
 
@@ -35,7 +35,7 @@ const SearchResult = ({navigation}) => {
             <View style = {[styles.boxStyle, styles.box2]}>
                 <View style = {styles.productContainer}>
                     <View style = {styles.imageContainer}>
-                        <Image source={require('./assets/table1.jpeg')} style = {styles.resultImage} />
+                        <Image source={require('../../assets/table1.jpeg')} style = {styles.resultImage} />
                     </View>
                     <View style = {styles.descriptionContainer}>
                         <Text style = {styles.productName}>Round Teak Wood Dining Table</Text>
@@ -43,11 +43,11 @@ const SearchResult = ({navigation}) => {
                             {!(Platform.OS == "web") && (
                                 <Text style = {styles.price}>$100</Text>
                             )}
-                            <Image source = {require('./assets/starFilled.jpeg')} style = {styles.ratingImage} />
-                            <Image source = {require('./assets/starFilled.jpeg')} style = {styles.ratingImage} />
-                            <Image source = {require('./assets/starFilled.jpeg')} style = {styles.ratingImage} />
-                            <Image source = {require('./assets/starFilled.jpeg')} style = {styles.ratingImage} />
-                            <Image source = {require('./assets/starEmpty.jpeg')} style = {styles.ratingImage} />
+                            <Image source = {require('../../assets/starFilled.jpeg')} style = {styles.ratingImage} />
+                            <Image source = {require('../../assets/starFilled.jpeg')} style = {styles.ratingImage} />
+                            <Image source = {require('../../assets/starFilled.jpeg')} style = {styles.ratingImage} />
+                            <Image source = {require('../../assets/starFilled.jpeg')} style = {styles.ratingImage} />
+                            <Image source = {require('../../assets/starEmpty.jpeg')} style = {styles.ratingImage} />
                         </View>
 
                         {Platform.OS == "web" && (
@@ -71,7 +71,7 @@ const SearchResult = ({navigation}) => {
 
                 <View style = {styles.productContainer}>
                     <View style = {styles.imageContainer}>
-                        <Image source={require('./assets/table2.jpeg')} style = {styles.resultImage} />
+                        <Image source={require('../../assets/table2.jpeg')} style = {styles.resultImage} />
                     </View>
                     <View style = {styles.descriptionContainer}>
                         <Text style = {styles.productName}>Brown Wood Round Coffee Table</Text>
@@ -79,11 +79,11 @@ const SearchResult = ({navigation}) => {
                             {!(Platform.OS == "web") && (
                                 <Text style = {styles.price}>$180</Text>
                             )}
-                            <Image source = {require('./assets/starFilled.jpeg')} style = {styles.ratingImage} />
-                            <Image source = {require('./assets/starFilled.jpeg')} style = {styles.ratingImage} />
-                            <Image source = {require('./assets/starFilled.jpeg')} style = {styles.ratingImage} />
-                            <Image source = {require('./assets/starEmpty.jpeg')} style = {styles.ratingImage} />
-                            <Image source = {require('./assets/starEmpty.jpeg')} style = {styles.ratingImage} />
+                            <Image source = {require('../../assets/starFilled.jpeg')} style = {styles.ratingImage} />
+                            <Image source = {require('../../assets/starFilled.jpeg')} style = {styles.ratingImage} />
+                            <Image source = {require('../../assets/starFilled.jpeg')} style = {styles.ratingImage} />
+                            <Image source = {require('../../assets/starEmpty.jpeg')} style = {styles.ratingImage} />
+                            <Image source = {require('../../assets/starEmpty.jpeg')} style = {styles.ratingImage} />
                         </View>
 
                         {Platform.OS == "web" && (
@@ -106,7 +106,7 @@ const SearchResult = ({navigation}) => {
 
                 <View style = {styles.productContainer}>
                     <View style = {styles.imageContainer}>
-                        <Image source={require('./assets/table3.webp')} style = {styles.resultImage} />
+                        <Image source={require('../../assets/table3.webp')} style = {styles.resultImage} />
                     </View>
                     <View style = {styles.descriptionContainer}>
                         <Text style = {styles.productName}>Modern Round Coffee Table</Text>
@@ -114,11 +114,11 @@ const SearchResult = ({navigation}) => {
                             {!(Platform.OS == "web") && (
                                 <Text style = {styles.price}>$230</Text>
                             )}
-                            <Image source = {require('./assets/starFilled.jpeg')} style = {styles.ratingImage} />
-                            <Image source = {require('./assets/starFilled.jpeg')} style = {styles.ratingImage} />
-                            <Image source = {require('./assets/starEmpty.jpeg')} style = {styles.ratingImage} />
-                            <Image source = {require('./assets/starEmpty.jpeg')} style = {styles.ratingImage} />
-                            <Image source = {require('./assets/starEmpty.jpeg')} style = {styles.ratingImage} />
+                            <Image source = {require('../../assets/starFilled.jpeg')} style = {styles.ratingImage} />
+                            <Image source = {require('../../assets/starFilled.jpeg')} style = {styles.ratingImage} />
+                            <Image source = {require('../../assets/starEmpty.jpeg')} style = {styles.ratingImage} />
+                            <Image source = {require('../../assets/starEmpty.jpeg')} style = {styles.ratingImage} />
+                            <Image source = {require('../../assets/starEmpty.jpeg')} style = {styles.ratingImage} />
                         </View>
 
                         {Platform.OS == "web" && (
@@ -141,7 +141,7 @@ const SearchResult = ({navigation}) => {
 
                 <View style = {styles.productContainer}>
                     <View style = {styles.imageContainer}>
-                        <Image source={require('./assets/table4.webp')} style = {styles.resultImage} />
+                        <Image source={require('../../assets/table4.webp')} style = {styles.resultImage} />
                     </View>
                     <View style = {styles.descriptionContainer}>
                         <Text style = {styles.productName}>Modern Round Coffee Table</Text>
@@ -149,11 +149,11 @@ const SearchResult = ({navigation}) => {
                             {!(Platform.OS == "web") && (
                                 <Text style = {styles.price}>$199</Text>
                             )}
-                            <Image source = {require('./assets/starFilled.jpeg')} style = {styles.ratingImage} />
-                            <Image source = {require('./assets/starFilled.jpeg')} style = {styles.ratingImage} />
-                            <Image source = {require('./assets/starFilled.jpeg')} style = {styles.ratingImage} />
-                            <Image source = {require('./assets/starFilled.jpeg')} style = {styles.ratingImage} />
-                            <Image source = {require('./assets/starEmpty.jpeg')} style = {styles.ratingImage} />
+                            <Image source = {require('../../assets/starFilled.jpeg')} style = {styles.ratingImage} />
+                            <Image source = {require('../../assets/starFilled.jpeg')} style = {styles.ratingImage} />
+                            <Image source = {require('../../assets/starFilled.jpeg')} style = {styles.ratingImage} />
+                            <Image source = {require('../../assets/starFilled.jpeg')} style = {styles.ratingImage} />
+                            <Image source = {require('../../assets/starEmpty.jpeg')} style = {styles.ratingImage} />
                         </View>
 
                         {Platform.OS == "web" && (
@@ -176,7 +176,7 @@ const SearchResult = ({navigation}) => {
 
                 <View style = {styles.productContainer}>
                     <View style = {styles.imageContainer}>
-                        <Image source={require('./assets/table5.jpeg')} style = {styles.resultImage} />
+                        <Image source={require('../../assets/table5.jpeg')} style = {styles.resultImage} />
                     </View>
                     <View style = {styles.descriptionContainer}>
                         <Text style = {styles.productName}>Modern Round Coffee Table</Text>
@@ -184,11 +184,11 @@ const SearchResult = ({navigation}) => {
                             {!(Platform.OS == "web") && (
                                 <Text style = {styles.price}>$160</Text>
                             )}
-                            <Image source = {require('./assets/starFilled.jpeg')} style = {styles.ratingImage} />
-                            <Image source = {require('./assets/starFilled.jpeg')} style = {styles.ratingImage} />
-                            <Image source = {require('./assets/starFilled.jpeg')} style = {styles.ratingImage} />
-                            <Image source = {require('./assets/starEmpty.jpeg')} style = {styles.ratingImage} />
-                            <Image source = {require('./assets/starEmpty.jpeg')} style = {styles.ratingImage} />
+                            <Image source = {require('../../assets/starFilled.jpeg')} style = {styles.ratingImage} />
+                            <Image source = {require('../../assets/starFilled.jpeg')} style = {styles.ratingImage} />
+                            <Image source = {require('../../assets/starFilled.jpeg')} style = {styles.ratingImage} />
+                            <Image source = {require('../../assets/starEmpty.jpeg')} style = {styles.ratingImage} />
+                            <Image source = {require('../../assets/starEmpty.jpeg')} style = {styles.ratingImage} />
                         </View>
 
                         {Platform.OS == "web" && (
@@ -211,7 +211,7 @@ const SearchResult = ({navigation}) => {
 
                 <View style = {styles.productContainer}>
                     <View style = {styles.imageContainer}>
-                        <Image source={require('./assets/table6.jpeg')} style = {styles.resultImage} />
+                        <Image source={require('../../assets/table6.jpeg')} style = {styles.resultImage} />
                     </View>
                     <View style = {styles.descriptionContainer}>
                         <Text style = {styles.productName}>Modern Round Coffee Table</Text>
@@ -219,11 +219,11 @@ const SearchResult = ({navigation}) => {
                             {!(Platform.OS == "web") && (
                                 <Text style = {styles.price}>$240</Text>
                             )}
-                            <Image source = {require('./assets/starFilled.jpeg')} style = {styles.ratingImage} />
-                            <Image source = {require('./assets/starFilled.jpeg')} style = {styles.ratingImage} />
-                            <Image source = {require('./assets/starFilled.jpeg')} style = {styles.ratingImage} />
-                            <Image source = {require('./assets/starEmpty.jpeg')} style = {styles.ratingImage} />
-                            <Image source = {require('./assets/starEmpty.jpeg')} style = {styles.ratingImage} />
+                            <Image source = {require('../../assets/starFilled.jpeg')} style = {styles.ratingImage} />
+                            <Image source = {require('../../assets/starFilled.jpeg')} style = {styles.ratingImage} />
+                            <Image source = {require('../../assets/starFilled.jpeg')} style = {styles.ratingImage} />
+                            <Image source = {require('../../assets/starEmpty.jpeg')} style = {styles.ratingImage} />
+                            <Image source = {require('../../assets/starEmpty.jpeg')} style = {styles.ratingImage} />
                         </View>
 
                         {Platform.OS == "web" && (
